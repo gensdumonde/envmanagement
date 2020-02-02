@@ -15,7 +15,7 @@ resource "aws_instance" "example" {
   key_name                    = "${var.aws-security-key-name}"
   associate_public_ip_address = true
   monitoring                  = true
-  user_data                   = "${file("bootstrap.ps1")}"
+  user_data                   = "${file("")}"
 
   root_block_device {
     volume_size           = 128
