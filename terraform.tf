@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "octopus-terraform-releasetour"
+    bucket = "envmgmt"
     key    = "releasetour.tfstate"
-    region = "ap-southeast-1"
+    region = "us-east-1"
   }
 }
 
@@ -23,8 +23,8 @@ resource "aws_instance" "example" {
   }
 
   tags {
-    Name = "Octopus 3.18 Release Tour"
-    OwnerContact = "RobPearson"
+    Name = "TF Demo"
+    OwnerContact = "gcorpuz"
   }
 
 }
